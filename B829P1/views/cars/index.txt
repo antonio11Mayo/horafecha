@@ -1,0 +1,66 @@
+1  <%=link_to '________tabla______________________
+      ____DESDE cars/ index.html.erb ir a nuevo 
+      Carro', new_car_path  %>
+2  <li> <%= link_to('______________________________
+     _________________________ir a mayita', 
+      mayita_path) %> </li>
+3    <%= link_to('Moverse a Lista 
+     de  motos', motos_path) %>
+4  <style>
+5   table, th, td {
+6    border: 1px solid black;
+7    border-collapse: collapse;
+8    }
+9    th, td{
+10   padding: 15px;
+11   }
+12 </style>
+13    L i s t a d o  de Mis carros  index.html.erb
+14 <table class="default">
+15   <tr>
+16     <th>id</th>
+17     <th>License Plate   Moto con M_</th>
+18     <th>Model</th>
+19     <th>Tint</th>
+20     <th>Editar</th>
+21     <th>Eliminar</th>
+22     <th>id</th>
+23    
+24   </tr>
+25   <%- @cars.each do |car| %>
+26    <tr>
+27      <td>
+28        <%= car.id%>
+29      </td>
+30      <td>
+31        <%= car.license_plate %>
+32      </td>
+33      <td>
+34         <%= car.model %>
+35      </td>
+36      <td>
+37         <%= car.tint %>
+38      </td>
+39      <td>
+40         <%=link_to 'Editar', edit_car_path(car) %>
+41      </td>
+42      <td>
+43         <%==link_to 'Eliminar', car_path(c
+             ar), method: :delete %>
+44      </td>
+45      <td>
+46        <%= car.id%>
+47      </td>
+49      
+50    </tr>
+51   <% end %>
+52  </table>
+53  <div>
+54  <%=link_to 'DESDE index.html.erb ir a
+     nuevo Carro', new_car_path  %>
+55  </div>
+56  <li> <%= link_to('Dirigirse a mayita'
+    , mayita_path) %> </li>
+57  <%= link_to('Moverse a Lista de  motos'
+    , motos_path) %>
+58

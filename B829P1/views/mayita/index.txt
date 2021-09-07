@@ -1,0 +1,70 @@
+1  <h1>Mayit proyecto</h1>
+2  <ul>
+3  <li>
+4       <%= link_to('Moverse a prpducts', products_path) %>
+5   </li>
+6    <li>
+7       <%= link_to('Moverse a Lista de  carros', cars_path) %>
+8    </li>
+9    <li>
+10      <%= link_to('Moverse a Articles', articles_path) %>
+11   </li>
+12   <li>
+13     <%= link_to('Moverse a Saludos Hellos', hellos_path) %>
+14   </li>
+15  
+16   <li> PRUEBA1</li>
+17 <h2> copia desde  c a r s     NUEVO carro En mayita index </h2>
+18  id no cambia_____________License_plate_____________m o d e l o _______________color 
+19 <%= form_for :car, url: cars_path, method: :post do |g| %> 
+20  <%= g.number_field :id, placeholder: 'id' %>
+21  <%= g.text_field :license_plate, placeholder: 'placa license_plate' %>
+22  <%= g.number_field :model, placeholder: 'model O' %>
+23  <%= g.text_field :tint, placeholder: 'tint COLOR' %>
+24  <%= g.submit 'Save en Lista Carros' %>
+25 <% end %>
+26  # Nota: requiere llenar placa, modelo y color para adicionar nuevo
+27    <li>FIN DE PRUEBA1</li>
+28    <li> inicio de PRUEBA2</li>
+29 <h4> fecha En mayita index desde ctr </h4>
+30 <p> YMD <%= @z_ %> </p>
+31 <p> Y <%= @z__ %> </p>
+32 <p> M <%= @z___ %> </p>
+33 <p> D <%= @z %> </p>
+34  <li>FIN DE PRUEBA2</li>
+35
+36  # inicio PRUEBA 3 en mayita contro
+37        <% z = 44435 %>
+38 <p>  <%= z %> </p>
+39 
+40 <%= form_for :car, url: cars_path, method: :post do |g| %> 
+41 <%= g.text_field :license_plate, placeholder: 'placa license_plate' %>
+42 <%= g.submit 'Save en Lista Carros' %>
+43 <% end %>
+44 # Nota: requiere llenar placa, modelo y color para adicionar nuevo    
+45        
+46   # fin PRUEBA 3 ___
+47
+48   <li> chequeo moto a las:</li>
+49 <p>myiinxL16 fechcom: <%= Time.now %> directamente en myiinx </p>
+50  <p>myiinxL17 fechcom: <%=@fechtt %> con var desde mtictr </p> 
+51 <p>myiinxL18 año: <%= Time.now.year %> directamente en myiinx </p>
+52 <p>myiinxL19 mes: <%= Time.now.month %> directamente en myiinx </p>
+53 <p>myiinxL20 día del mes: <%= Time.now.day %> direct en myiinx </p>
+54 <p> L21 Dia sem20jul1810: <%= Date.parse("1810-7-20").strftime("%u") %> direct en myiinx </p> 
+55 <p> L22 Dia sem7AGO1819: <%= Date.parse("1819-8-7").strftime("%u") %> direct en myiinx </p> 
+56 <p> L23 Dia sem actual: <%= @dd_s %> con var  desde mytactr </p> 
+57 <p> L24  Fecha actual AMD <%= @xfx %>  con var  desde mytactr </p>
+58  <li>página de inicio
+59   <%= link_to('Moverse a Lista de  motos', motos_path) %>
+60  </li>
+61   <li>información mayitamotos
+62   </li>
+63  <li>contacto con mayitaMotos</li>
+64  <li>pandemia</li>
+65  </ul>
+66  
+67<%= @fch %>
+
+
+

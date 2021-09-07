@@ -1,0 +1,113 @@
+1  Rails.application.configure do
+2  # Settings specified here will take precedence over those in config/application.rb.
+3
+4  # Code is not reloaded between requests.
+5  config.cache_classes = true
+6
+7  # Eager load code on boot. This eager loads most of Rails and
+8  # your application in memory, allowing both threaded web servers
+9  # and those relying on copy on write to perform better.
+10  # Rake tasks automatically ignore this option for performance.
+11  config.eager_load = true
+12
+13  # Full error reports are disabled and caching is turned on.
+14  config.consider_all_requests_local       = false
+15  config.action_controller.perform_caching = true
+16
+17  # Ensures that a master key has been made available in either ENV["RAILS_MASTER_KEY"]
+18  # or in config/master.key. This key is used to decrypt credentials (and other encrypted files).
+19  # config.require_master_key = true
+20
+21  # Disable serving static files from the `/public` folder by default since
+22  # Apache or NGINX already handles this.
+23  config.public_file_server.enabled = ENV['RAILS_SERVE_STATIC_FILES'].present?
+24
+25  # Compress CSS using a preprocessor.
+26  # config.assets.css_compressor = :sass
+27
+28  # Do not fallback to assets pipeline if a precompiled asset is missed.
+29  config.assets.compile = false
+30
+31  # Enable serving of images, stylesheets, and JavaScripts from an asset server.
+32  # config.action_controller.asset_host = 'http://assets.example.com'
+33
+34  # Specifies the header that your server uses for sending files.
+35  # config.action_dispatch.x_sendfile_header = 'X-Sendfile' # for Apache
+36  # config.action_dispatch.x_sendfile_header = 'X-Accel-Redirect' # for NGINX
+37
+38  # Store uploaded files on the local file system (see config/storage.yml for options).
+39  config.active_storage.service = :local
+40
+41  # Mount Action Cable outside main process or domain.
+42  # config.action_cable.mount_path = nil
+43  # config.action_cable.url = 'wss://example.com/cable'
+44  # config.action_cable.allowed_request_origins = [ 'http://example.com', /http:\/\/example.*/ ]
+45
+46  # Force all access to the app over SSL, use Strict-Transport-Security, and use secure cookies.
+47  # config.force_ssl = true
+48
+49  # Use the lowest log level to ensure availability of diagnostic information
+50  # when problems arise.
+51  config.log_level = :debug
+52
+53  # Prepend all log lines with the following tags.
+54  config.log_tags = [ :request_id ]
+55
+56  # Use a different cache store in production.
+57  # config.cache_store = :mem_cache_store
+58
+59  # Use a real queuing backend for Active Job (and separate queues per environment).
+60  # config.active_job.queue_adapter     = :resque
+61  # config.active_job.queue_name_prefix = "mayita_production"
+62
+63  config.action_mailer.perform_caching = false
+64
+65  # Ignore bad email addresses and do not raise email delivery errors.
+66  # Set this to true and configure the email server for immediate delivery to raise delivery errors.
+67  # config.action_mailer.raise_delivery_errors = false
+68
+69  # Enable locale fallbacks for I18n (makes lookups for any locale fall back to
+70  # the I18n.default_locale when a translation cannot be found).
+71  config.i18n.fallbacks = true
+72
+73  # Send deprecation notices to registered listeners.
+74  config.active_support.deprecation = :notify
+75
+76  # Use default logging formatter so that PID and timestamp are not suppressed.
+77  config.log_formatter = ::Logger::Formatter.new
+78
+79  # Use a different logger for distributed setups.
+80  # require 'syslog/logger'
+81  # config.logger = ActiveSupport::TaggedLogging.new(Syslog::Logger.new 'app-name')
+82
+83  if ENV["RAILS_LOG_TO_STDOUT"].present?
+84    logger           = ActiveSupport::Logger.new(STDOUT)
+85    logger.formatter = config.log_formatter
+86    config.logger    = ActiveSupport::TaggedLogging.new(logger)
+87  end
+88
+89  # Do not dump schema after migrations.
+90  config.active_record.dump_schema_after_migration = false
+91
+92  # Inserts middleware to perform automatic connection switching.
+93  # The `database_selector` hash is used to pass options to the DatabaseSelector
+94  # middleware. The `delay` is used to determine how long to wait after a write
+95  # to send a subsequent read to the primary.
+96  #
+97  # The `database_resolver` class is used by the middleware to determine which
+98  # database is appropriate to use based on the time delay.
+99  #
+100  # The `database_resolver_context` class is used by the middleware to set
+101  # timestamps for the last write to the primary. The resolver uses the context
+102  # class timestamps to determine how long to wait before reading from the
+103  # replica.
+104  #
+105  # By default Rails will store a last write timestamp in the session. The
+106  # DatabaseSelector middleware is designed as such you can define your own
+107  # strategy for connection switching and pass that into the middleware through
+108  # these configuration options.
+109  # config.active_record.database_selector = { delay: 2.seconds }
+110  # config.active_record.database_resolver = ActiveRecord::Middleware::DatabaseSelector::Resolver
+111  # config.active_record.database_resolver_context = ActiveRecord::Middleware::DatabaseSelector::Resolver::Session
+112 end
+

@@ -1,0 +1,6 @@
+1 class Car < ApplicationRecord
+2   # esta convencion de rails ayuda a poner
+3   # validaciones sobre los atributos de un modelo
+4   # en este caso que estos campos sean requeridos
+5   validates :license_plate, :tint, :model, presence: true
+6 end 

@@ -1,0 +1,31 @@
+1  class MayitaController < ApplicationController
+2   def index 
+3    @fechtt = Time.now
+4    @yñ = Time.now.year
+5    @mes = Time.now.month
+6    @dyms = Time.now.day
+7  
+8    @xfx = @yñ.to_s + "-" + @mes.to_s + "-" +  @dyms.to_s
+9    @dd_s = Date.parse(@xfx).strftime("%u")
+10
+11   @Diasemc20jul1810 = Date.parse("1810-7-20").strftime("%u")
+12
+13  # inicio PRUEBA 2 en mayita controller
+14  # Fecha Date YMD
+15  @z_ = Date.new(1995, 12, 21)
+16  @z__ = Date.new(1995, 12, 21).year
+17  @z___ = Date.new(1995, 12, 21).month 
+18  @z = Date.new(1995, 12, 21).day
+19  #car = Car.find(params[:id])
+20    #car.update(license_plate: params[:car][:license_plate],
+21     #          model: params[:car][:model],
+22     #          tint: params[:car][:tint])
+23           
+24    #@car = Car.find(params[:id])
+25  #@z
+26  # __en my ctr   fin PRUEBA 2 ___
+27
+28  end   
+29  
+30 end
+

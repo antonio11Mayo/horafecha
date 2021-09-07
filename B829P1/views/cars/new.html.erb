@@ -1,0 +1,14 @@
+nuevo carro
+<br> ...  </br>
+id no cambiaBLE_(new.h.e)___License_plate_____________m o d e l o _______________color
+<%= form_for :car, url: cars_path, method: :post do |g| %> 
+  <%= g.number_field :id, placeholder: 'id' %>
+  <%= g.text_field :license_plate, placeholder: 'placa license_plate' %>
+  <%= g.number_field :model, placeholder: 'model O' %>
+  <%= g.text_field :tint, placeholder: 'tint COLOR' %>
+  <%= g.submit 'Save en Lista Carros' %>
+<% end %>
+
+<div>
+  <%=link_to 'f r o m   newHTMLerb Ir a listado de carros', cars_path %>
+</div>

@@ -1,0 +1,46 @@
+1 class CarsController < ApplicationController
+2   def index
+3     # va para tabla, datos en pantalla, botones pedido  
+4     @cars = Car.all
+5   end
+6
+7   def create 
+8     new_car = Car.new(
+9     license_plate: params[:car][:license_plate],
+10    model: params[:car][:model],
+11    tint: params[:car][:tint]
+12    )
+13    new_car.save
+14    redirect_to cars_path
+15  end
+16  
+17  def edit
+18    #sale hacia edicion
+19    @car = Car.find(params[:id])
+20  end   
+21
+22  def update
+23    #actualiza lo colocado en edicion
+24    car = Car.find(params[:id])
+25    car.update(license_plate: params[:car][:license_plate],
+26               model: params[:car][:model],
+27               tint: params[:car][:tint])
+28           
+29    @car = Car.find(params[:id])
+30      if @car.update(license_plate: params[:car][:license_plate],
+31                   model: params[:car][:model],
+32                   tint: params[:car][:tint])
+33      redirect_to cars_path
+34     else
+35      render :edit
+36     end
+37   end
+38
+39   def destroy
+40     car = Car.find(params[:id])
+41     car.destroy
+42    redirect_to cars_path
+43   end
+44 
+45 end
+

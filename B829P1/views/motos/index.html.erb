@@ -1,0 +1,113 @@
+<h1>Mayita proyecto_ motosindx </h1>
+ <%=link_to '_____DESDE motos/ index.html.erb ir a nuevo Carro o moto', new_car_path  %> 
+<ul>
+  <li>
+     <%= link_to('desde motidx a Lista de  carros', cars_path) %>
+  </li>
+  <li>
+  chequeo moto __ en plan
+   </li>
+    <li>collap doblelin página de inicialización en motos index
+   <%= link_to('Moverse a mayita', mayita_path) %>
+  </li>
+   <li>border gruesolin información mayitamotos desde Idx
+   <%= link_to('Moverse a mayita', mayita_path) %>
+   </li>
+  <li>paddin areacuadrit contacto con mayitamotos desde Idx ___ en plan</li>
+  <li>pandemia  __ sin plan</li>
+</ul>
+<h3>tarea L i s t a d o  de Motos  i_nd_ex ht-mlerb</h3>
+<style>
+table, th, td {
+  border: 8px solid green;
+  border-collapse: green;
+}
+th, td{
+ padding: 50px;
+}
+</style>
+
+
+ <table class="default">
+    <tr>
+    <th>id</th>
+    <th>ojo Moto Placa M_</th>
+    <th>Modelo</th>
+    <th>Colores</th>
+    <th>Editar</th>
+    <th>Eliminar</th>
+      </tr>
+  <%- @cars.each do |car| %>
+    <tr>
+      <td>
+        <%= car.id%>
+      </td>
+      <td>
+        <%= car.license_plate %>
+      </td>
+      <td>
+         <%= car.model %>
+      </td>
+      <td>
+         <%= car.tint %>
+      </td> 
+      <td>
+         <%=link_to 'Editar', edit_car_path(car) %>
+      </td>
+      <td>
+         <%==link_to 'Eliminar', car_path(car), method: :delete %>
+      </td>
+           
+    </tr>
+  <% end %>
+  </table>
+<h3> <%= link_to('Moverse a mayita', mayita_path) %></h3>
+<style>
+table, th, td {
+  border: 8px solid green;
+  border-collapse: green;
+}
+th, td{
+ padding: 50px;
+}
+</style>
+  <table>
+
+  <tr>
+    <th>id</th>
+    <th>__Colores </th>
+    <th>______Modelo</th>
+    <th>____Placa</th>
+    <th>___Editar</th>
+    <th>Eliminar</th>
+  </tr>
+<table>
+<%- @cars.each do |car| %>
+    <tr>
+      <td>
+        <%= car.id%>
+      </td>
+      <td>
+        <%= car.tint %>
+      </td>
+      <td>
+         <%= car.model %>
+      </td>
+      <td>
+         <%= car.license_plate %>
+      </td> 
+      <td>
+         <%=link_to 'Editar', edit_car_path(car) %>
+      </td>
+      <td>
+         <%==link_to 'Eliminar', car_path(car), method: :delete %>
+      </td>
+           
+    </tr>
+  <% end %>
+</table>
+ <li>
+     <%= link_to('Moverse a Saludos Hellos', hellos_path) %>
+  </li>
+
+

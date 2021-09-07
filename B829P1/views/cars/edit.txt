@@ -1,0 +1,19 @@
+1  <h2>Editar carro </h2>
+2   id no cambia_____________License_plate_______
+       ______m o d e l o _______________color 
+3  <%= form_for :car, url: car_path(@c
+       ar), method: :put do |f| %>
+4    <%= f.number_field :id, placeholder: 'id' %>
+5    <%= f.text_field :license_plate,
+       placeholder: 'PLACA' %>
+6 
+7    <%= f.number_field :model, placeholder: 'YEAR' %>
+8    <%= f.text_field :tint, placeholder: 'COLOR' %>
+9    <%= f.submit 'Actualizar este carro' %>
+10   <%= f.number_field :id, placeholder: 'id' %>
+11  <% end %>
+12
+13 <div>
+14    <%=link_to 'd e s d e   edit    Ir a listado de
+         carros', cars_path %>
+15 </div>

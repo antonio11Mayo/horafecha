@@ -1,0 +1,49 @@
+1 # The test environment is used exclusively to run your application's
+2 # test suite. You never need to work with it otherwise. Remember that
+3 # your test database is "scratch space" for the test suite and is wiped
+4 # and recreated between test runs. Don't rely on the data there!
+5
+6 Rails.application.configure do
+7  # Settings specified here will take precedence over those in config/application.rb.
+8
+9    config.cache_classes = false
+10   config.action_view.cache_template_loading = true
+11
+12   # Do not eager load code on boot. This avoids loading your whole application
+13  # just for the purpose of running a single test. If you are using a tool that
+14  # preloads Rails for running tests, you may have to set it to true.
+15  config.eager_load = false
+16
+17  # Configure public file server for tests with Cache-Control for performance.
+18  config.public_file_server.enabled = true
+19  config.public_file_server.headers = {
+20    'Cache-Control' => "public, max-age=#{1.hour.to_i}"
+21  }
+22
+23  # Show full error reports and disable caching.
+24  config.consider_all_requests_local       = true
+25  config.action_controller.perform_caching = false
+26  config.cache_store = :null_store
+27
+28  # Raise exceptions instead of rendering exception templates.
+29  config.action_dispatch.show_exceptions = false
+30
+31  # Disable request forgery protection in test environment.
+32  config.action_controller.allow_forgery_protection = false
+33
+34  # Store uploaded files on the local file system in a temporary directory.
+35  config.active_storage.service = :test
+36
+37  config.action_mailer.perform_caching = false
+38
+39  # Tell Action Mailer not to deliver emails to the real world.
+40  # The :test delivery method accumulates sent emails in the
+41  # ActionMailer::Base.deliveries array.
+42  config.action_mailer.delivery_method = :test
+43
+44  # Print deprecation notices to the stderr.
+45  config.active_support.deprecation = :stderr
+46
+47  # Raises error for missing translations.
+48  # config.action_view.raise_on_missing_translations = true
+49 end

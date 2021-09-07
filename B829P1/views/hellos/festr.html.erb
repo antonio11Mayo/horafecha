@@ -1,0 +1,63 @@
+<li> <%= link_to('Dirigirse a mayita', mayita_path) %> </li>>
+<li> <%= link_to('Dirigirse a cars', cars_path) %> </li>>
+<h3> Linea 3 Estamos en view>hellos>Festr.html.erb </h3>
+ <p> <h2>Ln4 Dia  <%=  + @dd_s  + "   es " + @dh.to_s  %> </p> </h2>
+<p> "Desde hellos festr Línea 5:"+<%= @tls %> + "Chequeo en festr"</p>
+#L6redirect_to motos_path
+<p>#L7 Línea 7festr__<p>
+<p>#L8pLínea 8festr__</p>
+<h2>"Desde hellos festr Línea 9 @tls:"+ <%= @tls %> </p> </h2>
+L10festr Desde Ln4cntr  @dd_s + "   es " + @dh.to_s 
+<li> <%= link_to('motos', motos_path) %> </li>
+ <li> <%= link_to('mayita', mayita_path) %> </li>
+ <li> <%= link_to('cars', cars_path) %> </li>
+ <li> <%= link_to('car s', cars_path) %> </li>
+ @dmgn  = "dia  check " <%=  @dmgn %>
+ 
+ <%= form_tag car_path, method: :get do %>
+  <div class="form-group">
+    <%= text_field_tag :concept, params[:concept], class: "form-control", placeholder: "Concepto" %>
+  </div>
+  <div class="form-group">
+    <%= select_tag :category_id, options_from_collection_for_select(Category.all, "id", "name", params[:category_id]), prompt: "Categoría", class: "form-control" %>
+  </div>
+  <%= submit_tag "Buscar", name: nil, class: "btn btn-primary btn-md" %>
+<% end %>
+
+ nuevo carro
+
+id no cambiaBLE_(new.h.e)___License_plate_____________m o d e l o _______________color
+<%= form_for :car, url: cars_path, method: :post do |g| %> 
+  <%= g.number_field :id, placeholder: 'id' %>
+  <%= g.text_field :license_plate, placeholder: 'placa license_plate' %>
+  <%= g.number_field :model, placeholder: 'model O' %>
+  <%= g.text_field :tint, placeholder: 'tint COLOR' %>
+  <%= g.submit 'Save en Lista Carros' %>
+<% end %>
+
+@person = Person.new(birth_date: Date.new(1795, 12, 21))
+<%= form_with model: @person do |form| %>
+<%= form.date_select :birth_date %>
+<% end %>
+
+<div>
+  <%=link_to 'f r o m   newHTMLerb Ir a listado de carros', cars_path %>
+</div>
+
+
+Editar carro 
+id no cambia_____________License_plate_____________m o d e l o _______________color 
+Editar carro
+<%= form_for :car, url: car_path(@car), method: :put do |f| %>
+  <%= f.number_field :id, placeholder: 'id' %>
+  <%= f.text_field :license_plate, placeholder: 'PLACA' %>
+ 
+  <%= f.number_field :model, placeholder: 'YEAR' %>
+  <%= f.text_field :tint, placeholder: 'COLOR' %>
+  <%= f.submit 'Actualizar este carro' %>
+  <%= f.number_field :id, placeholder: 'id' %>
+<% end %>
+
+<div>
+  <%=link_to 'd e s d e   edit    Ir a listado de carros', cars_path %>
+</div>

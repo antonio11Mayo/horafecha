@@ -1,0 +1,63 @@
+1 Rails.application.configure do
+2  # Settings specified here will take precedence over those in config/application.rb.
+3
+4  # In the development environment your application's code is reloaded on
+5  # every request. This slows down response time but is perfect for development
+6  # since you don't have to restart the web server when you make code changes.
+7  config.cache_classes = false
+8
+9  # Do not eager load code on boot.
+10  config.eager_load = false
+11
+12  # Show full error reports.
+13  config.consider_all_requests_local = true
+14
+15  # Enable/disable caching. By default caching is disabled.
+16  # Run rails dev:cache to toggle caching.
+17  if Rails.root.join('tmp', 'caching-dev.txt').exist?
+18    config.action_controller.perform_caching = true
+19    config.action_controller.enable_fragment_cache_logging = true
+20
+21    config.cache_store = :memory_store
+22    config.public_file_server.headers = {
+23      'Cache-Control' => "public, max-age=#{2.days.to_i}"
+24    }
+25  else
+26    config.action_controller.perform_caching = false
+27
+28    config.cache_store = :null_store
+29  end
+30
+31  # Store uploaded files on the local file system (see config/storage.yml for options).
+32  config.active_storage.service = :local
+33
+34  # Don't care if the mailer can't send.
+35  config.action_mailer.raise_delivery_errors = false
+36
+37  config.action_mailer.perform_caching = false
+38
+39  # Print deprecation notices to the Rails logger.
+40  config.active_support.deprecation = :log
+41
+42  # Raise an error on page load if there are pending migrations.
+43  config.active_record.migration_error = :page_load
+44
+45  # Highlight code that triggered database queries in logs.
+46  config.active_record.verbose_query_logs = true
+47
+48  # Debug mode disables concatenation and preprocessing of assets.
+49  # This option may cause significant delays in view rendering with a large
+50  # number of complex assets.
+51  config.assets.debug = true
+52
+53  # Suppress logger output for asset requests.
+54  config.assets.quiet = true
+55
+56  # Raises error for missing translations.
+57  # config.action_view.raise_on_missing_translations = true
+58
+59  # Use an evented file watcher to asynchronously detect changes in source code,
+60  # routes, locales, etc. This feature depends on the listen gem.
+61  config.file_watcher = ActiveSupport::EventedFileUpdateChecker
+62 end
+

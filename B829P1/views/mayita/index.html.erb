@@ -1,0 +1,73 @@
+<h1>Mayit proyecto</h1>
+<ul>
+<li>
+     <%= link_to('Moverse a prpducts', products_path) %>
+  </li>
+  <li>
+     <%= link_to('Moverse a Lista de  carros', cars_path) %>
+  </li>
+  <li>
+     <%= link_to('Moverse a Articles', articles_path) %>
+  </li>
+  <li>
+     <%= link_to('Moverse a Saludos Hellos', hellos_path) %>
+  </li>
+  
+  <li> PRUEBA1</li>
+<h2> copia desde  c a r s     NUEVO carro En mayita index </h2>
+id no cambia_____________License_plate_____________m o d e l o _______________color 
+<%= form_for :car, url: cars_path, method: :post do |g| %> 
+  <%= g.number_field :id, placeholder: 'id' %>
+  <%= g.text_field :license_plate, placeholder: 'placa license_plate' %>
+  <%= g.number_field :model, placeholder: 'model O' %>
+  <%= g.text_field :tint, placeholder: 'tint COLOR' %>
+  <%= g.submit 'Save en Lista Carros' %>
+<% end %>
+# Nota: requiere llenar placa, modelo y color para adicionar nuevo
+    <li>FIN DE PRUEBA1</li>
+    <li> inicio de PRUEBA2</li>
+<h4> fecha En mayita index desde ctr </h4>
+<p> YMD <%= @z_ %> </p>
+<p> Y <%= @z__ %> </p>
+<p> M <%= @z___ %> </p>
+<p> D <%= @z %> </p>
+ <li>FIN DE PRUEBA2</li>
+
+ # inicio PRUEBA 3 en mayita contro
+        <% z = 44435 %>
+<p>  <%= z %> </p>
+
+<%= form_for :car, url: cars_path, method: :post do |g| %> 
+<%= g.text_field :license_plate, placeholder: 'placa license_plate' %>
+<%= g.submit 'Save en Lista Carros' %>
+<% end %>
+# Nota: requiere llenar placa, modelo y color para adicionar nuevo
+
+       
+        
+  # fin PRUEBA 3 ___
+
+
+  <li> chequeo moto a las:</li>
+ <p>myiinxL16 fechcom: <%= Time.now %> directamente en myiinx </p>
+ <p>myiinxL17 fechcom: <%=@fechtt %> con var desde mtictr </p> 
+ <p>myiinxL18 año: <%= Time.now.year %> directamente en myiinx </p>
+ <p>myiinxL19 mes: <%= Time.now.month %> directamente en myiinx </p>
+ <p>myiinxL20 día del mes: <%= Time.now.day %> direct en myiinx </p>
+ <p> L21 Dia sem20jul1810: <%= Date.parse("1810-7-20").strftime("%u") %> direct en myiinx </p> 
+ <p> L22 Dia sem7AGO1819: <%= Date.parse("1819-8-7").strftime("%u") %> direct en myiinx </p> 
+ <p> L23 Dia sem actual: <%= @dd_s %> con var  desde mytactr </p> 
+ <p> L24  Fecha actual AMD <%= @xfx %>  con var  desde mytactr </p>
+  <li>página de inicio
+   <%= link_to('Moverse a Lista de  motos', motos_path) %>
+  </li>
+   <li>información mayitamotos
+   </li>
+  <li>contacto con mayitaMotos</li>
+  <li>pandemia</li>
+</ul>
+
+<%= @fch %>
+
+
+

@@ -1,0 +1,71 @@
+~/Documentos/mayita$ tree
+.
+├── anmy11sul.txt
+├── app
+│   │       └── connection.rb
+│   ├── controllers
+│   │   ├── application_controller.rb
+│   │   ├── articles_controller.rb
+│   │   ├── cars_controller.rb
+│   │   ├── concerns
+│   │   ├── hellos_controller.rb
+│   │   ├── mayita_controller.rb
+│   │   ├── motos_controller.rb
+│   │   └── products_controller.rb
+│   ├── mailers
+│   │   └── application_mailer.rb
+│   ├── models
+│   │   ├── application_record.rb
+│   │   ├── car.rb
+│   │   ├── concerns
+│   │   └── products.rb
+│   └── views
+│       ├── articles
+│       │   └── index.html.erb
+│       ├── cars
+│       │   ├── edit.html.erb
+│       │   ├── index.html.erb
+│       │   └── new.html.erb
+│       ├── hellos
+│       │   ├── festr.html.erb
+│       │   ├── festv.html.erb
+│       │   ├── index.html.erb
+│       │   └── new.html.erb
+│       ├── layouts
+│       │   ├── application.html.erb
+│       │   ├── mailer.html.erb
+│       │   └── mailer.text.erb
+│       ├── mayita
+│       │   └── index.html.erb
+│       ├── motos
+│       │   └── index.html.erb
+│       └── products
+│           └── index.html.erb
+├── babel.config.js
+├── config
+│   ├── environments
+│   │   ├── development.rb
+│   │   ├── production.rb
+│   │   └── test.rb
+│   ├── routes.rb
+├── db
+│   ├── development.sqlite3
+│   ├── migrate
+│   │   └── 20210104162315_create_cars.rb
+│   ├── schema.rb
+│   └── seeds.rb
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

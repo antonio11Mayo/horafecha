@@ -1,0 +1,11 @@
+1 Rails.application.routes.draw do
+2   # For details on the DSL available within this file,
+       see https://guides.rubyonrails.org/routing.html
+3   get 'mayita', controller: :mayita, action: :index
+4   resources :hellos 
+5   resources :cars
+6   resources :motos
+7   resources :articles
+8   resources :products
+9  end
+________________________________________----

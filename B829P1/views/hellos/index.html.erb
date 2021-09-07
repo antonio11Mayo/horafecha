@@ -1,0 +1,117 @@
+1  <li>Desde  index.html.erb  en  view>hellos>
+2         <%= link_to('Moverse a mayita', mayita_path) %>
+3      </li>
+4  <h3>Hello  Buenos Dias    Buenas Tardes   Buenas Noches </h3>
+5    <p>
+6      variables con at 
+7   </p>
+8   <p>
+9      Dia y hora <%= Time.now %> 
+10   </p>
+13   <p>
+14    de index Linea 12__ Año: <%= Time.now.year %> 
+15   </p>
+16   <p>
+17      Mes <%= Time.now.month %> 
+18   </p>
+19   <p>
+20    Línea 18 (.day)  Día del mes: <%= Time.now.day %> 
+21   </p>
+22   <p>
+23    hora(s) <%= Time.now.hour %> 
+24   </p>
+23   <p>
+24     minutos <%= Time.now.min %> 
+25   </p>
+26   <p>
+27     segundos <%= Time.now.sec %> 
+28   </p>
+29     <p>
+30      segunds <%= Time.now.sec.to_s + " sgds" %> 
+31    </p>
+32     <p>
+33    sin el to_i, segundos más diez <%= Time.now.sec + 10 %> 
+34    </p>
+35    <p>
+36    con to_s  texto _ <%= Time.now.to_s + "  _  _f e c h a " %> 
+37   </p>
+38   <p>
+39    +1hora +3600 _ <%= Time.now + 3600 %> 
+40   </p>
+41   <li>Desde  index   hello
+42       <%= link_to('Moverse a mayita', mayita_path) %>
+43    </li>
+44   <p>
+45    A continuación dia de la semana:
+46   </p>
+47   <p>
+48    De Línea 45:  1lun, 2mart, 3mie, 4jue, 5vie, 6sab, 7dom 
+49    </p>
+50
+51   <p>
+52     De L.49: El dia actual de la semana  e s:
+53   </p>
+54  <p> Dia  <%=  + @dd_s  + "   es " + @dh.to_s  %> </p>
+55  <p> <%= @tls.to_s  %> </p>
+56  <p> <%= @cd %> </p>
+57   <p>
+58   <h3> Línea 55 dia en semana:<%= Date.parse(@fch).strftime("%u") %> </h3>
+59   </p>
+60   <p>
+61 Lin 61: año mes dia <%= @yñ.to_s + "-" + @mth.to_s + "-" +  @dy.to_s + @dd_s%>
+62    </p>
+63   <p>
+64  Lin 64: año mes dia diasem <%= @yñ.to_s + "-" + @mth.to_s + "-" +  @dy.to_s +  "-" +  @cd %>
+65   </p>
+66   Lin 66: año mes dia diasem <%= @yñ.to_s + "-" + @mth.to_s + "-" +  @dy.to_s +  "-" +  @d %>
+67   <p>
+68     <%=  @fch %>
+69   </p>
+70   <p> <%=  @lmv.to_s %> </p>
+71   <p> 1lun, 2mart, 3mie, 4jue, 5vie, 6sab, 7dom</p>
+72   <p>
+73   1819 ago 7 fue: <%= Date.parse("1819-08-07").strftime("%u") %>
+74   </p> 
+75   <p>
+76    1lun, 2mart, 3mie, 4jue, 5vie, 6sab, 7dom 
+77   </p>
+78   <p>
+79   1810 jul 20 fue: <%= Date.parse("1810-07-20").strftime("%u") %>
+80   </p>
+81   <p> El 20 de julio de 1810   fue __ <%= @d20 %> </p>
+82   <ul>
+83   <p>
+84   2020-02-05 diasem <%= Date.parse("2020-02-05").strftime("%u") %>
+85   </p>
+86   <p> 1dom, 2lun, 3mart, 4mie, 5jue, 6vie, 7sab </p>
+87   <p>
+88   1819 ago 7 fue: <%= Date.parse("1819-08-07").strftime("%u") %>
+89  </p> 
+90  <p>
+91   1dom, 2lun, 3mart, 4mie, 5jue, 6vie, 7sab 
+92  </p>
+93
+94  <ul>
+95    <li>
+96       <%= link_to('desde Hell indx a Lista de  carros', cars_path) %>
+97    </li>
+98    <li>
+99      Saludos 
+100   </li>
+101    <li>Desde  index   hello
+102       <%= link_to('Moverse a mayita', mayita_path) %>
+103    </li>
+104   <li>información mayitamotos desde Idx Hello
+105      <%= link_to('Moverse a motos', motos_path) %>
+106   </li>
+107     <li>contacto con mayitamotos desde Idx Hello__
+108       Está pendiente</li>
+109  <li>pandemia</li>
+110  
+111  </ul>
+112  <p>
+113  Desde hellos_controller.rb , La fecha es <%= @time%>
+114 </p> 
+115 <p>
+116 Desde hellos index ,el mes es <%= @mth%>
+117 </p> 

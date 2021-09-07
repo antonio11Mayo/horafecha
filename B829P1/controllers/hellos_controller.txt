@@ -1,0 +1,172 @@
+1 class HellosController < ApplicationController
+2  def dato  
+3    new_dato = Dato.new(
+4      datouno: params[:dato][:datouno],
+5      datodos: params[:dato][:datodos],
+6      datotres: params[:dato][:datotres]
+7    )
+8    new_dato.save
+9    redirect_to hellos_path
+10  end
+11
+12 #INICIO INDEX en hellos_controller
+13  def index
+14    @xxx = "___variable instancia requiere at"
+15    @time = Time.now
+16    @yñ = Time.now.year
+17    @mth = Time.now.month
+18    @dy = Time.now.day
+19    @fch = @yñ.to_s + "-" + @mth.to_s + "-" +  @dy.to_s
+20    @dd_s = Date.parse(@fch).strftime("%u")
+21    # Lin21: el anterior, @dd_s, es dia de la semana 
+22      # para otra prueba dia   @dd_s = "1"
+23    # para otra prueba dia @dd_s = 7.to_s
+24    # para  prueba mes @mth = "5"
+25
+26   case @dd_s
+27   when "1".."5"
+28    @dh = "día habil"
+29  #when "1", "3", "5"
+30  #  @lmv = "Lun, Mie, o Vie" 
+31   else
+32    @dh = "fin de semana"
+33   # @lmv = "Mart, Juev o Vier"
+34   end 
+35
+36   case @dd_s
+37   when "1", "3", "5"
+38   @lmv = "Lun, Mie, o Vie" 
+39  else
+40    @lmv = "Mart, Juev o Vier"
+41  end 
+42
+43    @dds = @dd_s
+44    
+45    if @dds == "1" then
+46      @d = "Lunes"
+47     elsif @dds == "2" then
+48        @d = "Martes"
+49      elsif @dds == "3" then
+50        @d = "Miercoles"
+51      elsif @dds == "4" then
+52        @d = "Jueves"
+53      elsif @dds == "5" then
+54        @d = "Viernes"
+55      elsif @dds == "6" then
+56        @d = "Sabado"
+57      elsif @dds == "7" then
+58        @d = "Domingo"
+59      else
+60      @d = "otro"
+61      end
+62
+63      case @dds
+64      when "7"
+65       @d = "D o m"
+66      when "6"
+67        @d = "S a b"
+68      when "5"
+69        @d = "V i e"
+60      when "4"
+61        @d = "J u e"
+62      when "3"
+63        @d = "M i e"
+64      when "2"
+65        @d = "M a r t"
+66      when "1"
+67        @d = "L u n"          
+68       
+69     else
+70        @d = "dias"
+71      end
+72
+73      @cd = @d
+74       
+75      @dgr = Date.parse("1810-7-20").strftime("%u")
+76      @dds = @dgr
+77      if @dds == "1" then
+78        @d = "Lunes"
+79       elsif @dds == "2" then
+80          @d = "Martes"
+81        elsif @dds == "3" then
+82          @d = "Miercoles"
+83        elsif @dds == "4" then
+84          @d = "Jueves"
+85        elsif @dds == "5" then
+86          @d = "Viernes"
+87        elsif @dds == "6" then
+88          @d = "Sabado"
+89        elsif @dds == "7" then
+90          @d = "Domingo"
+91        else
+92        @d = "otro"
+93        end
+94        @d20 = @d
+95      #
+96
+97      if @mth == 1 then
+98        @m = "Enero" 
+99      elsif @mth == 2 then
+100        @m = "Febrero" 
+101      elsif @mth == 3 then
+102        @m = "Marzo" 
+103      elsif @mth == 4 then
+104        @m = "Abril" 
+105      elsif @mth == 5 then
+106        @m = "Mayo" 
+107      elsif @mth == 6 then
+108        @m = "Junio" 
+109      elsif @mth == 7 then
+110        @m = "Julio" 
+111      elsif @mth == 8 then
+112          @m = "Agosto"
+113        elsif @mth == 9 then
+114          @m = "Septiembre" 
+115        elsif @mth == 10 then
+116          @m = "Octubre" 
+117        elsif @mth == 11 then
+118          @m = "Noviembre" 
+119        elsif @mth == 12 then
+120          @m = "Diciembre"      
+121      else
+122        @m = "otro"
+123      end 
+124 @dgr = Date.parse("1810-07-20").strftime("%u")
+125
+126 case @d 
+127 when "Lunes"
+128   @tls = "Tiene Lunes"
+129  #redirect_to motos_path
+130  #render :festv
+131 else
+132   @tls = "de L130contrhll: No tiene Lunes"
+133   # para ir aotras partes, redirec_to y render funcionaron:
+134   #redirect_to cars_path
+135   #render :festr
+136   #render :festr
+137  end   
+138
+139 end
+140 #END INDEX
+141
+142 end
+143 
+144 #def nuevo
+145 #@book = Book.nuevo
+146 #end
+
+#para crear formulario form_for en edit y new html.erb
+
+#<%= form_for @book do |f| %>
+# aca van los campos o columnas del formulario
+#<% end %>
+#
+
+
+#<%= form_tag ("/search", method: "get") do %>
+# <%= label tag(:q "Search for:") %>
+# <%= text_field_tag(:q) %>
+# <%= submit_tag("Search") %>
+# <% end %>
+
+
